@@ -1,0 +1,18 @@
+GET     /init                       controllers.HomeController.init()
+
+POST    /login                      controllers.UserController.submitLogin()
+POST    /register                   controllers.UserController.submitRegistration()
+GET     /cusers                     controllers.UserController.getAllUsers()
+
+# GET     /posts                      controllers.PostController.index()
+POST    /posts                      controllers.PostController.submitPost()
+GET     /cposts                     controllers.PostController.getAllPosts()
+# POST    /posts/:id/comments         controllers.HomeController.submitComment(id: Long)
+# GET     /photos/:id                 controllers.HomeController.getPhoto(id: Long)
+# GET     /comments/:ID               controllers.HomeController.getComments(id: Long)
+
+# GET     /cphotos                    controllers.HomeController.getAllPhotos()
+# GET     /ccomments                  controllers.HomeController.getAllComments()
+
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+POST    /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
